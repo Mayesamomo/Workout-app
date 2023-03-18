@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+   
+    <title>Workout Logger</title>
+  </head>
+
+  <body>
+    <h1>Workout Logger</h1>
+    <form id="workout-form">
+      <label for="exercise-name">Exercise Name:</label>
+      <input type="text" id="exercise-name" name="exercise-name" required />
+
+      <label for="sets">Sets:</label>
+      <input type="number" id="sets" name="sets" min="1" required />
+
+      <label for="reps">Reps:</label>
+      <input type="number" id="reps" name="reps" min="1" required />
+
+      <label for="time">Time (minutes):</label>
+      <input type="number" id="time" name="time" min="1" required />
+
+      <button type="submit">Log Workout</button>
+    </form>
+    <div id="log">
+      <h2>Logged Workouts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Exercise Name</th>
+            <th>Sets</th>
+            <th>Reps</th>
+            <th>Time (minutes)</th>
+          </tr>
+        </thead>
+        <tbody id="saved-exercises" displaySavedExercises()>
+
+        </tbody>
+      </table>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
